@@ -1,5 +1,5 @@
 {
-  "name": "react-native-viewpager-with-indicator",
+  "name": "react-native-viewpager-tab-indicator",
   "version": "1.0.0",
   "description": "A custom component of a viewpager in react native with left and right controls, touch scrolling and an animated tab indicator.",
   "main": "index.tsx",
