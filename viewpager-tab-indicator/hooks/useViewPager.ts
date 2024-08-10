@@ -4,9 +4,11 @@ import {Animated} from "react-native";
 const useViewPager = (data: any[]) => {
   const scrollX = useRef(new Animated.Value(0)).current;
   const index = useRef(0);
+  const [currentIndex, setcurrentIndex] = useState(0);
   const [width, setwidth] = useState(0);
   const onViewableItemsChanged = useRef(({viewableItems}) => {
     index.current = viewableItems[0].index;
+    setcurrentIndex(viewableItems[0].index);
   }).current;
   const viewConfig = useRef({viewAreaCoveragePercentThreshold: 50}).current;
   const flatRef = useRef(null);
@@ -30,6 +32,7 @@ const useViewPager = (data: any[]) => {
     setwidth,
     onViewableItemsChanged,
     flatRef,
+    currentIndex,
   };
 };
 

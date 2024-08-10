@@ -14,6 +14,7 @@ const ViewpagerTabIndicator = ({
   dotWidthOutputRange = [30, 50, 30],
   indicatorStyle,
   buttonControlStyle,
+  showControlls = true,
 }: ViewpagerTabIndicatorProps) => {
   const {
     scrollX,
@@ -24,6 +25,7 @@ const ViewpagerTabIndicator = ({
     setwidth,
     onViewableItemsChanged,
     flatRef,
+    currentIndex,
   } = useViewPager(data);
   return (
     <View style={[styles.container, {...style}]}>
@@ -64,27 +66,45 @@ const ViewpagerTabIndicator = ({
             ref={flatRef}
           />
 
-          <TouchableOpacity
-            onPress={scrollToPrev}
-            style={[styles.btnLeft, styles.shadow, {...buttonControlStyle}]}
-          >
-            <Image
-              source={require("../assets/images/direction-left.png")}
-              width={30}
-              height={30}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={scrollToNext}
-            style={[styles.btnRight, styles.shadow, {...buttonControlStyle}]}
-          >
-            <Image
-              source={require("../assets/images/direction-left.png")}
-              style={styles.right}
-              width={30}
-              height={30}
-            />
-          </TouchableOpacity>
+          {currentIndex > 0 && (
+            <TouchableOpacity
+              onPress={scrollToPrev}
+              style={[
+                showControlls
+                  ? {...styles.shadow, ...styles.btnLeft}
+                  : styles.btnHiddenLeft,
+                {...buttonControlStyle},
+              ]}
+            >
+              {showControlls && (
+                <Image
+                  source={require("@traveloffline/assets/images/direction-left.png")}
+                  width={30}
+                  height={30}
+                />
+              )}
+            </TouchableOpacity>
+          )}
+          {currentIndex < data.length - 1 && (
+            <TouchableOpacity
+              onPress={scrollToNext}
+              style={[
+                showControlls
+                  ? {...styles.shadow, ...styles.btnRight}
+                  : styles.btnHiddenRight,
+                {...buttonControlStyle},
+              ]}
+            >
+              {showControlls && (
+                <Image
+                  source={require("@traveloffline/assets/images/direction-left.png")}
+                  style={styles.right}
+                  width={30}
+                  height={30}
+                />
+              )}
+            </TouchableOpacity>
+          )}
           <PaginationIndicator
             dotStyle={dotStyle}
             containerStyle={{...styles.indicator, ...indicatorStyle}}

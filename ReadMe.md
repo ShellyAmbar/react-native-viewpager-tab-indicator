@@ -11,9 +11,26 @@
 ```
 import ViewpagerTabIndicator from 'react-native-viewpager-with-indicator';
 
+ const data = [
+    {
+      index: 0,
+      uri: "https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/49812/article_aligned%402x.jpg",
+    },
+    {
+      index: 1,
+      uri: "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/29/16/asset/10f527de873a/sub-buzz-567-1635525987-2.png",
+    },
+    {
+      index: 2,
+      uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQCyBT9pqTvPyPf2OjItvLQ99GcVyS1fXV7A&s",
+    },
+  ];
+
+
   <ViewpagerTabIndicator
           data={data}
-          dotStyle={{backgroundColor: GlobalColors.TextColors.white}}
+          dotStyle={{backgroundColor: "#FFF"}}
+          showControlls
         />
 ```
 
@@ -28,3 +45,4 @@ import ViewpagerTabIndicator from 'react-native-viewpager-with-indicator';
 | dotWidthOutputRange? | number[]                       |
 | indicatorStyle?      | ViewStyle                      |
 | buttonControlStyle?  | ViewStyle                      |
+| showControlls?       | boolean                        |

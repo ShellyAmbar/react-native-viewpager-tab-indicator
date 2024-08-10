@@ -8,6 +8,7 @@ type ViewpagerTabIndicatorProps = {
   dotWidthOutputRange?: number[];
   indicatorStyle?: ViewStyle;
   buttonControlStyle?: ViewStyle;
+  showControlls?: boolean;
 };
 
 export default ViewpagerTabIndicatorProps;

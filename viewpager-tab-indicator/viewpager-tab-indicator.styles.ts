@@ -26,6 +26,18 @@ export default StyleSheet.create({
 
     zIndex: 1,
   },
+  btnHiddenLeft: {
+    position: "absolute",
+    left: 0,
+    height: "100%",
+    width: "50%",
+  },
+  btnHiddenRight: {
+    position: "absolute",
+    right: 0,
+    height: "100%",
+    width: "50%",
+  },
   btnLeft: {
     position: "absolute",
     left: 20,
