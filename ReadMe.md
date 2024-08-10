@@ -30,7 +30,7 @@ import ViewpagerTabIndicator from 'react-native-viewpager-with-indicator';
   <ViewpagerTabIndicator
           data={data}
           dotStyle={{backgroundColor: "#FFF"}}
-          showControlls
+          showControlls={false}
         />
 ```
 
