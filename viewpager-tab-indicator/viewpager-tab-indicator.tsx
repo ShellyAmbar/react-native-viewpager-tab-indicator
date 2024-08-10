@@ -1,8 +1,7 @@
-import {View, FlatList, Animated, TouchableOpacity} from "react-native";
+import {View, FlatList, Animated, TouchableOpacity, Image} from "react-native";
 import React from "react";
 import ItemView from "./item-view/item-view";
 import styles from "./viewpager-tab-indicator.styles";
-import Left from "../assets/images/direction-left.svg";
 import {LinearGradient} from "expo-linear-gradient";
 import ViewpagerTabIndicatorProps from "./interfaces";
 import useViewPager from "./hooks/useViewPager";
@@ -69,13 +68,22 @@ const ViewpagerTabIndicator = ({
             onPress={scrollToPrev}
             style={[styles.btnLeft, styles.shadow, {...buttonControlStyle}]}
           >
-            <Left width={30} height={30} />
+            <Image
+              source={require("../assets/images/direction-left.png")}
+              width={30}
+              height={30}
+            />
           </TouchableOpacity>
           <TouchableOpacity
             onPress={scrollToNext}
             style={[styles.btnRight, styles.shadow, {...buttonControlStyle}]}
           >
-            <Left style={styles.right} width={30} height={30} />
+            <Image
+              source={require("../assets/images/direction-left.png")}
+              style={styles.right}
+              width={30}
+              height={30}
+            />
           </TouchableOpacity>
           <PaginationIndicator
             dotStyle={dotStyle}
