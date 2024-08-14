@@ -5,6 +5,7 @@
 # Example:
 
 ![](./assets/videos/1.gif)
+![](./assets/videos/2.gif)
 
 ## How to use:
 
