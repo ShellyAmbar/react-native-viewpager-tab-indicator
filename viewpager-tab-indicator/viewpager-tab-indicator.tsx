@@ -59,7 +59,7 @@ const ViewpagerTabIndicator = ({
             data={[...data]}
             pagingEnabled
             bounces={false}
-            keyExtractor={(item) => item.index.toString()}
+            keyExtractor={(item) => item.id?.toString()}
             onViewableItemsChanged={onViewableItemsChanged}
             viewabilityConfig={viewConfig}
             scrollEventThrottle={32}

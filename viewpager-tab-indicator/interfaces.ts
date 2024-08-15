@@ -1,7 +1,7 @@
 import {ViewStyle} from "react-native";
 
 type ViewpagerTabIndicatorProps = {
-  data: {index: number; uri: string}[];
+  data: {id: number; uri: string}[];
   style?: ViewStyle;
   showGradiant?: boolean;
   dotStyle?: ViewStyle;

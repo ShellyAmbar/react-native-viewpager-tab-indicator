@@ -1,5 +1,5 @@
 type ItemProps = {
-  item: {index: number; uri: string};
+  item: {id: number; uri: string};
   width: number;
 };
 
